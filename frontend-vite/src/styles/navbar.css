@@ -1,0 +1,60 @@
+/* Navbar */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.brandMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(47, 124, 246, 1), rgba(40, 215, 162, 0.95));
+  box-shadow: 0 10px 30px rgba(47, 124, 246, 0.22);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navLink {
+  padding: 9px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.navLink:hover {
+  background: var(--soft);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

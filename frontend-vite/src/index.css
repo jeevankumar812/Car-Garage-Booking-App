@@ -1,0 +1,294 @@
+:root {
+  /* Simple professional light palette */
+  --bg: #f5f7ff;
+  --bg2: #eef2ff;
+  --card: #ffffff;
+  --soft: #f3f4f6;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --muted2: #64748b;
+  --primary: #2563eb;
+  --primaryHover: #1d4ed8;
+  --danger: #dc2626;
+  --dangerHover: #b91c1c;
+
+  --radius: 12px;
+  --radius-sm: 10px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  --sans: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  color-scheme: light;
+  font-family: var(--sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(37, 99, 235, 0.10), transparent 56%),
+    radial-gradient(900px 520px at 82% 0%, rgba(99, 102, 241, 0.08), transparent 56%),
+    linear-gradient(180deg, var(--bg2), var(--bg));
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography baseline (so pages don't look unstyled) */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+/* Better focus for inputs/buttons */
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.page {
+  padding: 28px 0 44px;
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardPad {
+  padding: 18px;
+}
+
+@media (max-width: 720px) {
+  .cardPad {
+    padding: 14px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 860px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: #ffffff;
+  color: #111827;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover {
+  background: #f9fafb;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnPrimary {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btnPrimary:hover {
+  background: var(--primaryHover);
+}
+
+.btnDanger {
+  border-color: rgba(220, 38, 38, 0.35);
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.btnDanger:hover {
+  background: var(--dangerHover);
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  text-align: left;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #374151;
+}
+
+.formRow {
+  display: grid;
+  gap: 14px;
+}
+
+.fieldHint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+.fieldHintError {
+  color: rgba(255, 163, 163, 0.95);
+}
+
+
+
+
+
+
+.loginPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.loginCard {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.loginCard h2 {
+  margin-bottom: 5px;
+}
+
+.subText {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 10px;
+  background: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background: #1e3c72;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

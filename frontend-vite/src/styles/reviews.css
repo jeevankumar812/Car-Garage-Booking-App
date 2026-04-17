@@ -1,0 +1,124 @@
+/* Reviews */
+.reviewsSection .sectionHeader {
+  margin-bottom: 0;
+}
+
+.reviewsGrid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.reviewCard {
+  flex: 1;
+  min-width: 260px;
+  max-width: 340px;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviewCard:hover {
+  border-color: rgba(47, 124, 246, 0.45);
+  box-shadow: 0 10px 28px rgba(47, 124, 246, 0.12);
+}
+
+.reviewStars {
+  display: inline-flex;
+  gap: 2px;
+  letter-spacing: 0;
+  user-select: none;
+}
+
+.reviewStar {
+  color: var(--muted2);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.reviewStarOn {
+  color: rgba(255, 200, 87, 0.95);
+}
+
+.reviewComment {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.reviewMeta {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.reviewAuthor {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.reviewService {
+  color: var(--muted);
+}
+
+.reviewsSectionPage {
+  text-align: left;
+}
+
+.reviewsSectionPage .sectionTitle {
+  margin-bottom: 0;
+}
+
+.reviewFormCard {
+  margin-bottom: 0;
+}
+
+.reviewForm {
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+}
+
+.reviewTextarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.reviewRatingPick {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.reviewRatingBtn {
+  font-size: 28px;
+  line-height: 1;
+  padding: 4px 6px;
+  border: none;
+  background: transparent;
+  color: var(--muted2);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 120ms ease, transform 120ms ease;
+}
+
+.reviewRatingBtn:hover {
+  color: rgba(255, 200, 87, 0.65);
+  transform: scale(1.06);
+}
+
+.reviewRatingBtn.on {
+  color: rgba(255, 200, 87, 0.95);
+}

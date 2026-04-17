@@ -1,0 +1,74 @@
+/* Forms / inputs */
+.control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  outline: none;
+}
+
+select.control {
+  color-scheme: light;
+  background-color: var(--card);
+  color: var(--text);
+}
+
+select.control option {
+  background-color: var(--card);
+  color: var(--text);
+}
+
+.control[type="date"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+  color-scheme: light;
+  padding: 10px;
+}
+
+.control[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  cursor: pointer;
+}
+
+/* Admin panel */
+.adminHeader {
+  margin-bottom: 20px;
+}
+
+.adminForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.adminServiceCard {
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.adminServiceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(47, 124, 246, 0.2);
+}
+
+.adminServiceTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.adminPrice {
+  color: #2f7cf6;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.adminActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
