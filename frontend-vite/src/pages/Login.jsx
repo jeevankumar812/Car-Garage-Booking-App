@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";   // ✅ INSIDE COMPONENT
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Auth.css";
 
 function Login() {
-  const navigate = useNavigate();   // ✅ INSIDE FUNCTION
+  const navigate = useNavigate();
 
   const [data, setData] = useState({
     email: "",
@@ -23,12 +24,15 @@ function Login() {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/api/auth/login", data);
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        data
+      );
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate("/booking");
+      navigate("/admin");
     } catch (e) {
       alert(e?.response?.data?.message || "Login failed");
     } finally {
@@ -41,14 +45,18 @@ function Login() {
       <div className="container" style={{ display: "grid", placeItems: "center" }}>
         <div className="card" style={{ width: "min(520px, 100%)" }}>
           <div className="cardPad">
+
             <h2 className="sectionTitle" style={{ fontSize: 22, margin: 0 }}>
               Welcome back
             </h2>
+
             <p className="muted" style={{ marginTop: 8, marginBottom: 18, fontSize: 13 }}>
               Login to book services and track your bookings.
             </p>
 
             <div className="formRow">
+
+              {/* EMAIL */}
               <div className="field">
                 <div className="label">Email</div>
                 <input
@@ -59,6 +67,8 @@ function Login() {
                   onChange={handleChange}
                 />
               </div>
+
+              {/* PASSWORD */}
               <div className="field">
                 <div className="label">Password</div>
                 <input
@@ -71,13 +81,38 @@ function Login() {
                 />
               </div>
 
-              <button className="btn btnPrimary" onClick={handleSubmit} disabled={loading}>
+              {/* 🔥 FORGOT PASSWORD LINK */}
+              <p
+                style={{
+                  textAlign: "right",
+                  fontSize: "13px",
+                  color: "#007bff",
+                  cursor: "pointer",
+                  marginTop: "-5px"
+                }}
+                onClick={() => navigate("/forgot-password")}
+              >
+                Forgot Password?
+              </p>
+
+              {/* LOGIN BUTTON */}
+              <button
+                className="btn btnPrimary"
+                onClick={handleSubmit}
+                disabled={loading}
+              >
                 {loading ? "Signing in..." : "Login"}
               </button>
 
-              <button className="btn" onClick={() => navigate("/signup")} disabled={loading}>
+              {/* SIGNUP BUTTON */}
+              <button
+                className="btn"
+                onClick={() => navigate("/signup")}
+                disabled={loading}
+              >
                 Create a new account
               </button>
+
             </div>
           </div>
         </div>
@@ -86,4 +121,4 @@ function Login() {
   );
 }
 
-export default Login;   // ✅ MUST
+export default Login;

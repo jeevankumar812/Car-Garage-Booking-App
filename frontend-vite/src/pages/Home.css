@@ -1,0 +1,186 @@
+/* HOME PAGE ROOT */
+.homePage {
+  width: 100%;
+}
+
+/* HERO SECTION (uses your existing .hero but improves spacing) */
+.hero .container {
+  max-width: 900px;
+}
+
+/* BADGE (if not already added) */
+.badge {
+  display: inline-block;
+  margin-bottom: 15px;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* SECTION HEADINGS */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* SERVICES SECTIONS (used multiple times) */
+.services {
+  width: 100%;
+  padding: 60px 0;
+}
+
+/* CONTAINER FIX (center content but full width layout) */
+.services .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GRID SPACING IMPROVEMENT */
+.grid {
+  gap: 25px;
+}
+
+/* FEATURE CARDS */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* SERVICE CARDS (NO IMAGE VERSION) */
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* SECTION SPACING IMPROVEMENT */
+.services h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+/* REVIEWS SECTION */
+.services .container > h2 {
+  text-align: left;
+}
+
+/* BUTTON SPACING (HERO FIX) */
+.hero .btn {
+  margin-top: 10px;
+}
+
+/* FOOTER SPACING FIX */
+footer {
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .services {
+    padding: 40px 0;
+  }
+
+  .services .container {
+    padding: 0 20px;
+  }
+
+  .hero .container {
+    padding: 0 20px;
+  }
+
+  .section-title,
+  .services h2 {
+    font-size: 1.4rem;
+  }
+
+}
+
+/* ===== ALL SECTIONS FULL WIDTH ===== */
+.homeQuick,
+.servicesSection,
+.extraSection,
+.reviewsSection {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== CENTER CONTENT ===== */
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;   /* 🔥 centers content */
+  width: 100%;
+}
+
+/* ===== OPTIONAL BACKGROUND ===== */
+/* ===== HOME QUICK ===== */
+.homeQuick {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f8fafc;
+
+  display: flex;
+  justify-content: center;   /* center horizontally */
+}
+
+/* ===== SERVICES ===== */
+.servicesSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== EXTRA ===== */
+.extraSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f1f5f9;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== REVIEWS ===== */
+.reviewsSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;
+}

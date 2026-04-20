@@ -12,7 +12,7 @@ import Reviews from "./pages/Reviews";
 
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Footer from "./components/Footer";
+
 import "./index.css";
 
 import "./styles/shared.css";
@@ -23,6 +23,10 @@ import "./styles/extras.css";
 import "./styles/reviews.css";
 import "./styles/services.css";
 import "./styles/forms-admin.css";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+
+
 
 function App() {
   return (
@@ -40,6 +44,8 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/services" element={<Services />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
 
             {/* 🔒 PROTECTED ROUTES */}
             <Route
@@ -72,7 +78,7 @@ function App() {
           </Routes>
         </main>
 
-        <Footer />
+        
       </div>
     </BrowserRouter>
   );
